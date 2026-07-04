@@ -1,0 +1,98 @@
+---
+layout: layouts/base.njk
+title: Soil Testing & Soil Health | Coastal Soil Solutions BC
+description: Soil testing, consultations and organic FPJ fertilizer for growers in Richmond, Delta and Surrey. Book a $100 soil consultation with a soil biologist.
+permalink: /
+---
+<section class="hero" aria-label="Introduction">
+  <div class="hero__media">
+    <img src="{{ '/assets/img/home-hero-hands-compost-1280.webp' | url }}"
+         srcset="{{ '/assets/img/home-hero-hands-compost-640.webp' | url }} 640w, {{ '/assets/img/home-hero-hands-compost-1280.webp' | url }} 1280w, {{ '/assets/img/home-hero-hands-compost-1920.webp' | url }} 1920w"
+         sizes="100vw" width="1920" height="823" fetchpriority="high"
+         alt="Hands holding dark, crumbly compost above a garden bed.">
+  </div>
+  <div class="container hero__content">
+    <h1>Healthy soil is a living system. We test it, feed it, and teach it.</h1>
+    <p class="lead">Soil testing, biology-first amendment programs, and organic FPJ (fermented plant juice) fertilizer — Lower Mainland, BC.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="{{ site.booking_url | url }}">Book a consultation — $100</a>
+      <a class="btn btn--on-dark" href="{{ '/services/' | url }}">See our services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="paths-heading">
+  <div class="container">
+    <p class="kicker">Where do you grow?</p>
+    <h2 id="paths-heading">Three ways to work with us</h2>
+    <div class="card-grid" style="margin-top: var(--space-8)">
+      <a class="card" href="{{ '/fpj/' | url }}">
+        <img src="{{ '/assets/img/fpj-jug-greenhouse-400.webp' | url }}"
+             srcset="{{ '/assets/img/fpj-jug-greenhouse-400.webp' | url }} 400w, {{ '/assets/img/fpj-jug-greenhouse-800.webp' | url }} 800w"
+             sizes="(min-width: 768px) 33vw, 100vw" width="800" height="800" loading="lazy" decoding="async"
+             alt="An amber glass jug on a greenhouse potting bench surrounded by seedlings.">
+        <div class="card__body">
+          <h3>Stock FPJ fertilizer</h3>
+          <p>An organic, pet- and child-safe fermented plant juice your gardening customers can use on any plant, at any stage.</p>
+          <span class="card__cta">For retailers →</span>
+        </div>
+      </a>
+      <a class="card" href="{{ '/services/' | url }}">
+        <img src="{{ '/assets/img/card-hands-seedling-400.webp' | url }}"
+             srcset="{{ '/assets/img/card-hands-seedling-400.webp' | url }} 400w, {{ '/assets/img/card-hands-seedling-800.webp' | url }} 800w"
+             sizes="(min-width: 768px) 33vw, 100vw" width="800" height="800" loading="lazy" decoding="async"
+             alt="Hands pressing soil around a newly transplanted kale seedling.">
+        <div class="card__body">
+          <h3>Fix your soil</h3>
+          <p>$190 testing that measures nutrients, minerals and microbial activity — then a program that treats the cause, not the symptom.</p>
+          <span class="card__cta">For growers →</span>
+        </div>
+      </a>
+      <a class="card" href="{{ '/schools/' | url }}">
+        <img src="{{ '/assets/img/schools-card-planting-400.webp' | url }}"
+             srcset="{{ '/assets/img/schools-card-planting-400.webp' | url }} 400w, {{ '/assets/img/schools-card-planting-800.webp' | url }} 800w"
+             sizes="(min-width: 768px) 33vw, 100vw" width="800" height="800" loading="lazy" decoding="async"
+             alt="A child's gloved hands firming soil around a bean seedling.">
+        <div class="card__body">
+          <h3>School garden programs</h3>
+          <p>Edible gardens and soil education for Surrey, Delta and Richmond schools — with grant-friendly funding paths.</p>
+          <span class="card__cta">For schools →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="proof-strip" aria-label="Proof points">
+  <div class="container">
+    <p><strong>Stocked locally</strong>FPJ is carried by It's About Thyme Nursery, Burnaby</p>
+    <p><strong>Every ingredient named</strong>Full disclosure on the label — nothing hidden</p>
+    <p><strong>{{ site.area_cities }}</strong>Serving the Lower Mainland</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="story-heading">
+  <div class="container split">
+    <div class="prose">
+      <p class="kicker">Our story</p>
+      <h2 id="story-heading">A lifelong gardener turned soil biologist</h2>
+      <p>Coastal Soil Solutions is Matthew Tomlinson: gardening since childhood, now applying soil biology to bring dead dirt back to life across the Lower Mainland. The method is regenerative — indigenous microorganisms, mycology, composting, cover cropping and fermentation — and the goal is soil that feeds people for good.</p>
+      <p><a href="{{ '/about/' | url }}">Read our story</a></p>
+    </div>
+    <img src="{{ '/assets/img/card-worms-castings-800.webp' | url }}"
+         srcset="{{ '/assets/img/card-worms-castings-400.webp' | url }} 400w, {{ '/assets/img/card-worms-castings-800.webp' | url }} 800w"
+         sizes="(min-width: 768px) 50vw, 100vw" width="800" height="800" loading="lazy" decoding="async"
+         alt="Red composting worms in dark worm castings.">
+  </div>
+</section>
+
+<section class="cta-band section" aria-labelledby="cta-heading">
+  <div class="container">
+    <h2 id="cta-heading">Start with the soil you have</h2>
+    <p class="lead">A $100 consultation is the first step to knowing what is living — and what is missing — under your feet.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="{{ site.booking_url | url }}">Book a consultation</a>
+      <a class="btn btn--on-dark" href="{{ '/contact/' | url }}">Contact us</a>
+    </div>
+  </div>
+</section>

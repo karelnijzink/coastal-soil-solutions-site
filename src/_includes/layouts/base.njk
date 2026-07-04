@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="icon" href="{{ '/assets/brand/favicon.svg' | url }}" type="image/svg+xml">
+<link rel="preload" href="{{ '/assets/fonts/fraunces-latin-wght-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/inter-latin-wght-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ '/assets/img/home-hero-hands-compost-1280.webp' | url }}">
+<meta property="og:locale" content="en_CA">
+{%- set css %}{% include "css/tokens.css" %}{% include "css/main.css" %}{% endset %}
+<style>{{ css | replace("/assets/fonts/", ("/assets/fonts/" | url)) | safe }}</style>
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ site.name }}",
+  "url": "{{ site.url }}/",
+  "email": "{{ site.email }}",
+  "telephone": "+1-778-991-6202",
+  "founder": { "@type": "Person", "name": "{{ site.owner }}" },
+  "areaServed": ["Richmond BC", "Delta BC", "Surrey BC", "Lower Mainland BC"],
+  "description": "Soil testing, consultations, biology-first soil amendment programs and organic FPJ (fermented plant juice) fertilizer in the Lower Mainland, BC.",
+  "makesOffer": [
+    { "@type": "Offer", "priceCurrency": "CAD", "price": "100", "itemOffered": { "@type": "Service", "name": "Soil consultation" } },
+    { "@type": "Offer", "priceCurrency": "CAD", "price": "190", "itemOffered": { "@type": "Service", "name": "Soil testing and analysis" } }
+  ]
+}
+</script>
+{%- endif %}
+<!-- Analytics slot (GoatCounter — no cookies, no consent banner needed).
+     TODO: create account, replace TODO-goatcounter-code, uncomment. See CLAUDE.md.
+<script data-goatcounter="https://TODO-goatcounter-code.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+-->
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+{% include "partials/header.njk" %}
+<main id="main">
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+<script src="{{ '/assets/js/nav.js' | url }}" defer></script>
+</body>
+</html>

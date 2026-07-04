@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Contact & Booking | Coastal Soil Solutions
+description: Book a soil consultation or ask about FPJ stockist accounts. Email tomlinsonbc@gmail.com or call 778-991-6202. Serving the Lower Mainland.
+permalink: /contact/
+---
+<section class="hero hero--page" aria-label="Contact">
+  <div class="hero__media">
+    <img src="{{ '/assets/img/contact-hero-garden-tools-1280.webp' | url }}"
+         srcset="{{ '/assets/img/contact-hero-garden-tools-640.webp' | url }} 640w, {{ '/assets/img/contact-hero-garden-tools-1280.webp' | url }} 1280w, {{ '/assets/img/contact-hero-garden-tools-1920.webp' | url }} 1920w"
+         sizes="100vw" width="1920" height="1080" fetchpriority="high"
+         alt="Garden tools leaning against a cedar raised bed in evening light.">
+  </div>
+  <div class="container hero__content">
+    <h1>Talk to Coastal Soil Solutions</h1>
+    <p class="lead">Consultations, soil tests, FPJ stockist accounts and school programs — one conversation starts all of them.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="book-heading" id="book">
+  <div class="container">
+    <h2 id="book-heading">Book directly</h2>
+    <div class="notice" style="margin-top: var(--space-4)">
+      <p><strong>Online booking is coming soon.</strong> Until it is live, email or call and we will find a time within a couple of days.</p>
+    </div>
+    <div class="btn-row" style="margin-top: var(--space-6)">
+      <a class="btn btn--primary" href="mailto:{{ site.email }}?subject=Booking%20request">Email {{ site.email }}</a>
+      <a class="btn btn--secondary" href="tel:{{ site.phone_tel }}">Call {{ site.phone }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="details-heading">
+  <div class="container prose">
+    <h2 id="details-heading">Details</h2>
+    <p><strong>Email.</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p><strong>Phone.</strong> <a href="tel:{{ site.phone_tel }}">{{ site.phone }}</a></p>
+    <p><strong>Service area.</strong> {{ site.area }} — {{ site.area_cities }} and surrounding communities.</p>
+    <p><strong>Instagram.</strong> <a href="{{ site.instagram }}" rel="me noopener">@coastalsoilsolutions</a></p>
+    <p>When you write, a sentence on what you grow and where helps us come prepared.</p>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="brand" href="{{ '/' | url }}" style="color:#fff">
+        {% set maskId = "ftr" %}{% include "partials/logo-mark.njk" %}
+        <span class="brand__name">Coastal Soil Solutions</span>
+      </a>
+      <div class="casl">
+        <p><strong>{{ site.name }}</strong> — {{ site.owner }} · {{ site.area }}</p>
+        {%- if site.mailing_address %}
+        <p>{{ site.mailing_address }}</p>
+        {%- endif %}
+        {#- CASL TODO: publish mailing address here before any commercial email links to this site (see CLAUDE.md). -#}
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="tel:{{ site.phone_tel }}">{{ site.phone }}</a></p>
+        <p><a href="{{ '/privacy/' | url }}">Privacy &amp; consent</a></p>
+      </div>
+    </div>
+    <div>
+      <h2>Pages</h2>
+      <ul>
+        {%- for item in nav %}
+        <li><a href="{{ item.url | url }}">{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2>Elsewhere</h2>
+      <ul>
+        <li><a href="{{ site.instagram }}" rel="me noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

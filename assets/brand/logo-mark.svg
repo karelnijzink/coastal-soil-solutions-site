@@ -1,0 +1,12 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coastal Soil Solutions monogram">
+  <defs>
+    <mask id="horizons">
+      <rect width="64" height="64" fill="white"/>
+      <rect x="0" y="26.5" width="26" height="2.5" fill="black"/>
+      <rect x="0" y="36.5" width="26" height="2.5" fill="black"/>
+    </mask>
+  </defs>
+  <path d="M 50.4 16.6 A 24 24 0 1 0 50.4 47.4"
+        fill="none" stroke="#1B4B6B" stroke-width="9" stroke-linecap="round"
+        mask="url(#horizons)"/>
+</svg>

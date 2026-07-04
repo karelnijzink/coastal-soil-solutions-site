@@ -1,0 +1,94 @@
+---
+layout: layouts/base.njk
+title: FPJ Fertilizer Wholesale | Organic Fertilizer BC
+description: Stock FPJ (fermented plant juice) fertilizer - organic, pet and child safe, 15 ml per litre. Wholesale accounts for BC nurseries and garden centres.
+permalink: /fpj/
+---
+<section class="hero hero--page" aria-label="FPJ fertilizer">
+  <div class="hero__media">
+    <img src="{{ '/assets/img/fpj-hero-ferment-macro-1280.webp' | url }}"
+         srcset="{{ '/assets/img/fpj-hero-ferment-macro-640.webp' | url }} 640w, {{ '/assets/img/fpj-hero-ferment-macro-1280.webp' | url }} 1280w, {{ '/assets/img/fpj-hero-ferment-macro-1920.webp' | url }} 1920w"
+         sizes="100vw" width="1920" height="1080" fetchpriority="high"
+         alt="Amber fermented plant juice bubbling inside glass, lit from behind.">
+  </div>
+  <div class="container hero__content">
+    <p class="kicker" style="color:#fff"><span class="fpj-badge">FPJ</span></p>
+    <h1>FPJ (fermented plant juice) fertilizer — wholesale for BC retailers</h1>
+    <p class="lead">Organic, pet- and child-safe, made in the Lower Mainland. Your customers use 15 ml per litre on any plant, at any stage.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="{{ site.booking_url | url }}">Book a wholesale call</a>
+      <a class="btn btn--on-dark" href="mailto:{{ site.email }}?subject=FPJ%20stockist%20inquiry">Email {{ site.email }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="how-heading">
+  <div class="container split">
+    <div class="prose">
+      <h2 id="how-heading">What it is, and why it works</h2>
+      <p>FPJ is a traditional fermented extract. Nutrient-dense plants — horsetail and nettle — are fermented with organic sugar, which draws their soluble nutrients and plant compounds into a stable, plant-available liquid.</p>
+      <p>The ferment also carries IMO (indigenous microorganisms — the bacteria and fungi already adapted to local soils). Applied as a drench or foliar feed, it feeds the plant and inoculates the soil food web at the same time. That is the difference from a salt-based fertilizer: it feeds the biology that keeps feeding the plant.</p>
+      <hr class="fpj-rule">
+      <h3>Every ingredient, on the label</h3>
+      <ul class="ingredients">
+        <li>Horsetail</li>
+        <li>Nettle</li>
+        <li>Cannabis sativa</li>
+        <li>Organic sugar</li>
+        <li>Dechlorinated water</li>
+        <li>IMO (indigenous microorganisms)</li>
+      </ul>
+    </div>
+    <img src="{{ '/assets/img/texture-mycelium-macro-800.webp' | url }}"
+         srcset="{{ '/assets/img/texture-mycelium-macro-800.webp' | url }} 800w, {{ '/assets/img/texture-mycelium-macro-1600.webp' | url }} 1600w"
+         sizes="(min-width: 768px) 50vw, 100vw" width="1600" height="1600" loading="lazy" decoding="async"
+         alt="White mycelium threads spreading through dark wood-chip compost.">
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="spec-heading">
+  <div class="container">
+    <h2 id="spec-heading">Product spec</h2>
+    <div class="price-grid" style="margin-top: var(--space-6)">
+      <div class="price-card">
+        <h3>Format</h3>
+        <p class="price-card__price">½ gal <small>jug</small></p>
+        <p>Half-gallon jugs, shelf-ready.</p>
+      </div>
+      <div class="price-card">
+        <h3>Application</h3>
+        <p class="price-card__price">15 ml/L <small>dilution</small></p>
+        <p>Any plant, any stage — houseplants to market gardens.</p>
+      </div>
+      <div class="price-card">
+        <h3>Safety</h3>
+        <p class="price-card__price">Organic <small>inputs</small></p>
+        <p>Pet- and child-safe. Every ingredient disclosed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="stockist-heading">
+  <div class="container split">
+    <img src="{{ '/assets/img/fpj-jug-greenhouse-800.webp' | url }}"
+         srcset="{{ '/assets/img/fpj-jug-greenhouse-400.webp' | url }} 400w, {{ '/assets/img/fpj-jug-greenhouse-800.webp' | url }} 800w"
+         sizes="(min-width: 768px) 50vw, 100vw" width="800" height="800" loading="lazy" decoding="async"
+         alt="An amber glass jug on a greenhouse potting bench surrounded by seedlings.">
+    <div class="prose">
+      <h2 id="stockist-heading">Become a stockist</h2>
+      <p>FPJ is stocked at It's About Thyme Nursery in Burnaby. We are adding a small number of independent garden centres, nurseries and plant shops across Metro Vancouver.</p>
+      <p>Wholesale terms — pricing, margins and minimums — are available on request, and we can bring a sample drop to your shop so you can see the product before committing shelf space.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="{{ site.booking_url | url }}">Request a sample drop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band section" aria-labelledby="fpj-cta">
+  <div class="container">
+    <h2 id="fpj-cta">Questions about carrying FPJ?</h2>
+    <p class="lead">Email <a href="mailto:{{ site.email }}" style="color:#fff">{{ site.email }}</a> or call <a href="tel:{{ site.phone_tel }}" style="color:#fff">{{ site.phone }}</a>.</p>
+  </div>
+</section>

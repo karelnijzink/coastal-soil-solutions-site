@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ '/' | url }}">
+      {% set maskId = "hdr" %}{% include "partials/logo-mark.njk" %}
+      <span class="brand__name">Coastal Soil<br>Solutions</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span class="visually-hidden" hidden>Menu</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in nav %}
+        <li><a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+        <li><a class="btn btn--primary" href="{{ site.booking_url | url }}">Book a consult</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
