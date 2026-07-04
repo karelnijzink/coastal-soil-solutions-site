@@ -1,35 +1,44 @@
 # Coastal Soil Solutions — Website Rebuild
 
 ## Status
-**PHASE 0 COMPLETE — PLAN.md AWAITING APPROVAL. No build code until approved.**
-Planned stack (pending approval): Eleventy v3, self-hosted fonts, GitHub Actions →
-Pages deploy, GoatCounter slot (commented out). See PLAN.md decision log.
+**BUILT AND DEPLOYED** to https://karelnijzink.github.io/coastal-soil-solutions-site/ (GitHub Pages via Actions).
+Awaiting: Matt's content sign-off (launch gate 6), then manual DNS cutover per docs/DNS-CUTOVER.md.
+The old Google Sites page at coastalsoilsolutions.com stays live and untouched until cutover.
 
 ## What this is
 Static website for Coastal Soil Solutions (regenerative soil health services +
-FPJ fertilizer, Lower Mainland BC), deployed to **GitHub Pages via GitHub
-Actions**. This repo is the full rebuild of coastalsoilsolutions.com.
+FPJ fertilizer, Lower Mainland BC). Full rebuild of coastalsoilsolutions.com.
+Planning record: PLAN.md (approved). Source-of-truth content audit: AUDIT.md.
 
-## Brand direction
-Science-led regenerative soil. Credible, grounded, practitioner-focused —
-**not cutesy or crunchy-granola**. Think agronomy lab meets working farm.
+## Stack & decisions
+- **Eleventy v3** (Nunjucks + Markdown), zero client-side framework; only JS is a 10-line nav toggle.
+- CSS design tokens in `src/_includes/css/tokens.css`, inlined at build (no render-blocking CSS request).
+- Fonts: Fraunces + Inter variable WOFF2, self-hosted (copied from Fontsource at build). No Google Fonts CDN.
+- Images: generated via Higgsfield (Recraft V4.1 — see PLAN.md Imagery section; 21:9 slots cropped from 16:9, Soul Location not used), processed to responsive WebP by `scripts/process-images.mjs`. **Mood/design only — never fake people/labels/results.** Real-photo swap list: docs/PHOTO-TODO.md.
+- Path prefix is injected by the deploy workflow from `actions/configure-pages` — never hardcode it. All internal links go through the `| url` filter.
+- Brand: evolved blue "C" monogram (soil-horizon banding), palette/type per PLAN.md with WCAG-corrected greens. Amber = FPJ only.
+- Lighthouse (2026-07-04, mobile, deployed): Home 97/100/100/100 · Services 100/100/100/100. Reports in docs/lighthouse/.
 
-## Key decisions
-- Static site, GitHub Pages hosting, deployed from GitHub Actions (no server).
-- Booking CTAs are placeholders for now; they will wire to Cal.com/Calendly
-  later — do not hardcode a final booking URL yet.
-- Do not touch DNS or the live coastalsoilsolutions.com site until the
-  planned cutover.
+## Brand rules (do not violate in future edits)
+- Science-led, educational, no hype/puns/exclamation marks. Voice: "a soil scientist who farms."
+- No testimonials, certifications, results or claims that Matt hasn't supplied (see docs/FACT-CHECK.md).
+- CASL: no email-capture form without unticked consent checkbox + purpose statement + mailing address in footer.
 
 ## Repo layout
-- `src/` — site source
-- `assets/img/` — images
-- `docs/` — project docs / runbook material
+- `src/` pages (njk/md), `src/_data/site.json` (contact, booking URL — single source of truth), `src/_includes/` layout/partials/css
+- `assets/img/` optimized WebP · `assets/brand/` logo SVGs + USAGE.md · `scripts/` image pipeline
+- `docs/` EDITING.md (Matt), DEPLOYING.md, DNS-CUTOVER.md, TRANSFER.md, PHOTO-TODO.md, FACT-CHECK.md, lighthouse/
+- `.github/workflows/deploy.yml` — push to main = deploy
+
+## Run instructions
+`npm install` → `npm run serve` (localhost:8080) · `npm run build` → `_site/`. Deploy = push to main.
 
 ## TODO
-- [ ] Transfer repo ownership from `karelnijzink` to Matt's GitHub account
-      when available (Settings → General → Transfer ownership).
-- [ ] Replace placeholder imagery with real photos from Matt.
-- [ ] DNS cutover of coastalsoilsolutions.com to GitHub Pages at launch
-      (CNAME + custom domain config) — launch step only.
-- [ ] Wire booking CTAs to Cal.com/Calendly once the booking stack is live.
+- [ ] **Matt content sign-off** (reads every page on his phone; About page especially — it's in his voice).
+- [ ] **Mailing address from Matt** → `src/_data/site.json` `mailing_address` (CASL footer; blocks outbound email referencing this site, not the site itself).
+- [ ] **Booking**: replace `site.json` `booking_url` ("/contact/#book") with live Cal.com/Calendly link when Masterprompt 1's booking exists — one-line change, rewires every CTA.
+- [ ] **Analytics**: create GoatCounter account, replace `TODO-goatcounter-code` in `src/_includes/layouts/base.njk`, uncomment.
+- [ ] **Real photos** per docs/PHOTO-TODO.md (5 placeholder slots + Matt portrait/microscopy which have no generated stand-ins).
+- [ ] **DNS cutover** at launch per docs/DNS-CUTOVER.md (manual, Matt/Karel; Google Site stays up until then).
+- [ ] **Repo transfer to Matt** per docs/TRANSFER.md (after cutover is simplest).
+- [ ] Original "C" logo vector from Matt if closer tracing of the legacy mark is wanted (assets/brand/USAGE.md).
