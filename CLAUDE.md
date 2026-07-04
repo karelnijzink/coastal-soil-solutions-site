@@ -1,5 +1,10 @@
 # Coastal Soil Solutions — Website Rebuild
 
+## Status
+**PHASE 0 COMPLETE — PLAN.md AWAITING APPROVAL. No build code until approved.**
+Planned stack (pending approval): Eleventy v3, self-hosted fonts, GitHub Actions →
+Pages deploy, GoatCounter slot (commented out). See PLAN.md decision log.
+
 ## What this is
 Static website for Coastal Soil Solutions (regenerative soil health services +
 FPJ fertilizer, Lower Mainland BC), deployed to **GitHub Pages via GitHub
