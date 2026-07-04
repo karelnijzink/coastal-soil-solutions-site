@@ -14,7 +14,7 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{{ site.url }}{{ '/assets/img/home-hero-hands-compost-1280.webp' | url }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/home-hero-hands-compost-1280.webp">
 <meta property="og:locale" content="en_CA">
 {%- set css %}{% include "css/tokens.css" %}{% include "css/main.css" %}{% endset %}
 <style>{{ css | replace("/assets/fonts/", ("/assets/fonts/" | url)) | safe }}</style>
