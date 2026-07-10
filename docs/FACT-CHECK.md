@@ -4,7 +4,7 @@ Method: automated grep of the **deployed** pages (github.io URL) + manual read. 
 
 | Fact (AUDIT.md) | Expected | Page(s) | Verified |
 |---|---|---|---|
-| Consultation price | $100 CAD | Services, Home | ✅ |
+| Consultation price | $150 CAD | Services, Home | ✅ (raised from $100 on 2026-07-10 per Matt) |
 | Testing price | $190 CAD | Services | ✅ |
 | Amendment programs | custom-priced, no fixed price | Services | ✅ |
 | Test scope | macro/micro nutrients, minerals, bacterial & fungal activity | Services | ✅ |

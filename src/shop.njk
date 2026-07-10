@@ -1,0 +1,106 @@
+---
+layout: layouts/base.njk
+title: Buy FPJ Fertilizer | Organic Fertilizer BC
+description: Order FPJ (fermented plant juice) fertilizer for your own garden — organic, pet and child safe, 15 ml per litre. Delivery and pickup across the Lower Mainland.
+permalink: /shop/
+---
+<section class="hero hero--page" aria-label="Shop fertilizer">
+  <div class="hero__media">
+    <img src="{{ '/assets/img/fpj-hero-ferment-macro-1280.webp' | url }}"
+         srcset="{{ '/assets/img/fpj-hero-ferment-macro-640.webp' | url }} 640w, {{ '/assets/img/fpj-hero-ferment-macro-1280.webp' | url }} 1280w, {{ '/assets/img/fpj-hero-ferment-macro-1920.webp' | url }} 1920w"
+         sizes="100vw" width="1920" height="1080" fetchpriority="high"
+         alt="Amber fermented plant juice bubbling inside glass, lit from behind.">
+  </div>
+  <div class="container hero__content">
+    <p class="kicker" style="color:#fff"><span class="fpj-badge">FPJ</span></p>
+    <h1>Buy FPJ fertilizer for your own garden</h1>
+    <p class="lead">Organic, pet- and child-safe, made in the Lower Mainland. One dilution — 15 ml per litre — feeds any plant at any stage.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="#order">How to order</a>
+      <a class="btn btn--on-dark" href="{{ '/fpj/' | url }}">How FPJ works</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="shop-heading">
+  <div class="container">
+    <h2 id="shop-heading">Fertilizer</h2>
+    <p class="lead" style="margin-top: var(--space-3)">Made in small batches. Sold direct to growers across {{ site.area_cities }} and the wider Lower Mainland.</p>
+    <div class="shop-grid" style="margin-top: var(--space-8)">
+      {%- for product in shop.products %}
+      <article class="product-card">
+        <img src="{{ ('/assets/img/' + product.image + '-800.webp') | url }}"
+             srcset="{{ ('/assets/img/' + product.image + '-400.webp') | url }} 400w, {{ ('/assets/img/' + product.image + '-800.webp') | url }} 800w"
+             sizes="(min-width: 640px) 340px, 100vw" width="800" height="800" loading="lazy" decoding="async"
+             alt="{{ product.image_alt }}">
+        <div class="product-card__body">
+          <div class="product-card__head">
+            <h3>{{ product.name }} {% if product.badge %}<span class="fpj-badge">{{ product.badge }}</span>{% endif %}</h3>
+          </div>
+          <p class="product-card__size">{{ product.size }}</p>
+          {%- if product.price %}
+          <p class="product-card__price">${{ product.price }} <small>{{ product.currency }}</small></p>
+          {%- else %}
+          <p class="product-card__price product-card__price--tba">Pricing on request</p>
+          {%- endif %}
+          <p>{{ product.summary }}</p>
+          {%- if product.features %}
+          <ul>
+            {%- for feature in product.features %}
+            <li>{{ feature }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+          {%- if shop.checkout_live and product.buy_url %}
+          <a class="btn btn--primary" href="{{ product.buy_url }}">Buy now</a>
+          {%- else %}
+          <a class="btn btn--primary" href="mailto:{{ site.email }}?subject={{ ('Order: ' + product.name + ' (' + product.size + ')') | urlencode }}">Order by email</a>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="order-heading" id="order">
+  <div class="container">
+    <h2 id="order-heading">How to order</h2>
+    <div class="notice" style="margin-top: var(--space-4)">
+      <p><strong>Online checkout is coming.</strong> Until it is live, send an order by email or phone and we will confirm price, quantity and the pickup or delivery details within a couple of days.</p>
+    </div>
+    <ol class="steps" style="margin-top: var(--space-6)">
+      <li><strong>Send your order.</strong> Email or call with the product and how many jugs you want.</li>
+      <li><strong>We confirm.</strong> You get pricing, and a pickup or local delivery time across the Lower Mainland.</li>
+      <li><strong>Feed your soil.</strong> Dilute 15 ml per litre and apply as a drench or foliar feed.</li>
+    </ol>
+    <div class="btn-row" style="margin-top: var(--space-6)">
+      <a class="btn btn--primary" href="mailto:{{ site.email }}?subject={{ 'FPJ fertilizer order' | urlencode }}">Email {{ site.email }}</a>
+      <a class="btn btn--secondary" href="tel:{{ site.phone_tel }}">Call {{ site.phone }}</a>
+    </div>
+    <p style="margin-top: var(--space-4)">Prefer to buy in person? FPJ is stocked at It's About Thyme Nursery in Burnaby.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="wholesale-heading">
+  <div class="container split">
+    <img src="{{ '/assets/img/fpj-jug-greenhouse-800.webp' | url }}"
+         srcset="{{ '/assets/img/fpj-jug-greenhouse-400.webp' | url }} 400w, {{ '/assets/img/fpj-jug-greenhouse-800.webp' | url }} 800w"
+         sizes="(min-width: 768px) 50vw, 100vw" width="800" height="800" loading="lazy" decoding="async"
+         alt="An amber glass jug on a greenhouse potting bench surrounded by seedlings.">
+    <div class="prose">
+      <h2 id="wholesale-heading">Run a shop?</h2>
+      <p>We supply a small number of independent garden centres, nurseries and plant shops across Metro Vancouver. Wholesale terms and a sample drop are available on request.</p>
+      <div class="btn-row">
+        <a class="btn btn--secondary" href="{{ '/fpj/' | url }}">Wholesale &amp; stockist accounts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band section" aria-labelledby="shop-cta">
+  <div class="container">
+    <h2 id="shop-cta">Questions before you order?</h2>
+    <p class="lead">Email <a href="mailto:{{ site.email }}" style="color:#fff">{{ site.email }}</a> or call <a href="tel:{{ site.phone_tel }}" style="color:#fff">{{ site.phone }}</a>.</p>
+  </div>
+</section>

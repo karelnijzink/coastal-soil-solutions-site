@@ -1,0 +1,23 @@
+{
+  "_comment": "Fertilizer catalogue for the Shop page. Add/edit products here — the page rebuilds itself. PRICE: leave as null to show 'Pricing on request' (nothing false ships); set a number (e.g. 24) once Matt confirms the retail price. CHECKOUT: while 'checkout_live' is false, the order button emails an order request; when a real checkout exists, set a product's 'buy_url' to its payment link and flip 'checkout_live' to true — see CLAUDE.md.",
+  "checkout_live": false,
+  "products": [
+    {
+      "id": "fpj-half-gallon",
+      "name": "FPJ fertilizer",
+      "badge": "FPJ",
+      "size": "½ gallon jug",
+      "price": null,
+      "currency": "CAD",
+      "buy_url": "",
+      "summary": "Organic fermented plant juice — pet- and child-safe. It feeds the plant and inoculates the soil food web at the same time. Use 15 ml per litre on any plant, at any stage.",
+      "features": [
+        "Houseplants to market gardens",
+        "Every ingredient named on the label",
+        "Made in the Lower Mainland"
+      ],
+      "image": "fpj-jug-greenhouse",
+      "image_alt": "An amber glass jug of FPJ fertilizer on a greenhouse potting bench surrounded by seedlings."
+    }
+  ]
+}

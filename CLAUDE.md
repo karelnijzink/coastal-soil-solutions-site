@@ -38,6 +38,8 @@ Planning record: PLAN.md (approved). Source-of-truth content audit: AUDIT.md.
 - [ ] **Mailing address from Matt** → `src/_data/site.json` `mailing_address` (CASL footer; blocks outbound email referencing this site, not the site itself).
 - [ ] **Booking**: replace `site.json` `booking_url` ("/contact/#book") with live Cal.com/Calendly link when Masterprompt 1's booking exists — one-line change, rewires every CTA.
 - [ ] **Analytics**: create GoatCounter account, replace `TODO-goatcounter-code` in `src/_includes/layouts/base.njk`, uncomment.
+- [ ] **Shop retail price**: FPJ jug shows "Pricing on request" until Matt confirms a retail number → `src/_data/shop.json` `products[].price` (one-line edit per product; no invented price ships until then).
+- [ ] **Shop checkout**: order flow is email-based for now. When a payment link exists (Stripe Payment Link / Snipcart), set each product's `buy_url` and flip `checkout_live` to `true` in `src/_data/shop.json` — the Shop buttons switch from "Order by email" to "Buy now".
 - [ ] **Real photos** per docs/PHOTO-TODO.md (5 placeholder slots + Matt portrait/microscopy which have no generated stand-ins).
 - [ ] **DNS cutover** at launch per docs/DNS-CUTOVER.md (manual, Matt/Karel; Google Site stays up until then).
 - [ ] **Repo transfer to Matt** per docs/TRANSFER.md (after cutover is simplest).

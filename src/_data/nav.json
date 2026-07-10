@@ -1,5 +1,6 @@
 [
   { "label": "FPJ Fertilizer", "url": "/fpj/" },
+  { "label": "Shop", "url": "/shop/" },
   { "label": "Soil Services", "url": "/services/" },
   { "label": "Schools", "url": "/schools/" },
   { "label": "Our Story", "url": "/about/" },

@@ -12,8 +12,10 @@ You do not need any software installed. Everything is edited on github.com in th
 |---|---|
 | Homepage headline, cards, story teaser | `src/index.njk` |
 | FPJ page (product info, stockist text) | `src/fpj.njk` |
+| Shop page intro / ordering text | `src/shop.njk` |
 | Services page (what's included in each service) | `src/services.njk` |
-| **Prices** ($100 / $190) | `src/services.njk` (and the homepage hero button in `src/index.njk`) |
+| **Prices** ($150 / $190) | `src/services.njk` (and the homepage hero button in `src/index.njk`) |
+| **Fertilizer products / prices** | `src/_data/shop.json` — one place, feeds the Shop page |
 | Schools page | `src/schools.njk` |
 | Your story / About | `src/about.njk` |
 | Contact page | `src/contact.njk` |
